@@ -18,15 +18,15 @@ public class ExcelUtils {
 	public static void setExcelPath(String Path, String SheetName) throws Exception {
 		FileInputStream ExcelFile = new FileInputStream(Path);
 		ExcelWBook = new XSSFWorkbook(ExcelFile);
-		ExcelWSheet=ExcelWBook.getSheet(SheetName);
+		ExcelWSheet = ExcelWBook.getSheet(SheetName);
 
 	}
-	
-	public static String getStringData(int RowNum, int ColNum){
+
+	public static String getStringData(int RowNum, int ColNum) {
 		Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-		String CellData=Cell.getStringCellValue();
+		String CellData = Cell.getStringCellValue();
 		return CellData;
-		
+
 	}
 
 }
